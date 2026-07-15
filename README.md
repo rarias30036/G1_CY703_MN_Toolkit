@@ -27,11 +27,6 @@ python install.py
 
 Esto instala las librerias listadas en `requirements.txt` (requests y reportlab).
 
-Alternativa manual:
-
-```
-pip install -r requirements.txt
-```
 
 ## Ejecucion
 
