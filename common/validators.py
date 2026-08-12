@@ -17,6 +17,11 @@ def limpiar_objetivo(valor):
     valor = valor.strip().lower()
     valor = valor.replace("https://", "").replace("http://", "")
     valor = valor.split("/")[0]
+    # si el valor ya es una direccion ip valida (v4 o v6) no se recorta el
+    # puerto, ya que una ipv6 usa ":" como separador y split(":")[0] la
+    # dejaria vacia o incompleta
+    if es_ip(valor):
+        return valor
     valor = valor.split(":")[0]
     return valor
 
